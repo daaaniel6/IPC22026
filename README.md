@@ -4,6 +4,4 @@ version 1
 
 if (){
 
-}else{
-
 }
