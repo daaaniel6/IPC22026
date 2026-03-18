@@ -1,0 +1,11 @@
+.header-mi-estilo{
+  background:linear-gradient(to right, #337dbe, #1e5799);
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+}
+
+.estilo-titulo{
+  color: white;
+  font-size: 30px;
+}

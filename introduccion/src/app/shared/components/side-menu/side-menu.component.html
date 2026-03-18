@@ -1,0 +1,10 @@
+<div class="menu-container" [class.open]="isOpen">
+  <button class="close-btn" (click)="toggleMenu()">X</button>
+  <ul>
+    <li routerLink="/home">Home</li>
+    <li routerLink="/about">About</li>
+    <li (click)="goToContactPage()">Contact</li>
+    <li routerLink="/not-found">Not Found</li>
+  </ul>
+</div>
+<button class="open-btn" (click)="toggleMenu()">Menu</button>
