@@ -1,0 +1,64 @@
+<app-header title="Control Flow"></app-header>
+
+<app-side-menu></app-side-menu>
+
+<div class="card-container">
+  <div class="card">
+    <div class="card-header">Titulo</div>
+    <div class="card-body">Contenido de la tarjeta</div>
+    <button>Acción</button>
+  </div>
+
+  <!-- Sentencia de control de flujo: *ngIf -->
+  <div class="card">
+    <div class="card-header">IF</div>
+    <div class="card-body">
+      @if (score >= 85) {
+        <h1>Nota: {{ score }}</h1>
+        <p>¡Felicidades! Has aprobado con excelencia.</p>
+      } @else if (score >= 61) {
+        <h1>Nota: {{ score }}</h1>
+        <p>¡Felicidades! Has aprobado.</p>
+      } @else {
+        <h1>Nota: {{ score }}</h1>
+        <p>Reprobado.</p>
+      }
+    </div>
+    <button (click)="change()">Acción</button>
+  </div>
+
+  <!-- Sentencia for  Tarea: Cambiar la clase dependiendo si aprobo o reprobo -->
+  <div class="card">
+    <div class="card-header">For</div>
+    <div class="card-body">
+      @for (user of users; track user.id; let i = $index,even = $even) {
+        <p [class.clase-par]="even" [class.clase-impar]="!even">
+          {{ i }} {{ user.name }} - {{ user.score }} {{ even }}
+        </p>
+      } @empty {
+        <h1>No hay estudiantes</h1>
+      }
+    </div>
+    <button>Acción</button>
+  </div>
+
+  <!-- Sentencia switch-->
+  <div class="card">
+    <div class="card-header">Switch</div>
+    <div class="card-body">
+      @switch (role) {
+        @case ("admin") {
+          <h1>Bienvenido, administrador</h1>
+          <p>Tienes acceso completo al sistema.</p>
+        }
+        @case ("user") {
+          <h1>Bienvenido, usuario</h1>
+          <p>Tienes acceso limitado al sistema.</p>
+        }
+      }
+    </div>
+    <button (click)="change()">Acción</button>
+  </div>
+</div>
+
+<app-footer></app-footer>
